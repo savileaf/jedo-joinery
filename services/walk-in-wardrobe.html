@@ -51,27 +51,70 @@
         </div>
     </section>
 
-    <!-- Top Section -->
-    <section class="top">
+    <!-- Header Section -->
+    <header id="header">
         <div class="container">
-            <div class="top-contact">
-                <p class="top-phone"><span class="material-symbols-outlined">phone_forwarded</span>0451 118 519</p>
-                <p class="top-backslash">/</p>
-                <p class="top-email"><span class="material-symbols-outlined">mail</span>info@jedojoinery.com.au</p>
-            </div>
-            <div class="top-social">
-                <a href="/" target="_black">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
+            <div class="logo">
+                <a href="/">
+                    <!-- JEDO Joinery -->
+                    <img src="/images/logo3.png" alt="Jedo Joinery Logo">
                 </a>
             </div>
+            <nav>
+                <div class="hamburger" id="hamburger">
+                    <div class="hamburger-wrapper">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <ul id="nav-links" class="nav-links">
+                    <div class="nav-cross" id="nav-cross">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                    </div>
+                    <li><a href="/" class="" target="_self">Home</a></li>
+                    <li><a href="/aboutus.html" target="_self">About Us</a></li>
+                    <li id="service-dropdown" class="service-dropdown"><a class="nav-active">Services</a>
+                        <ul class="service-dropdown-menu" id="service-dropdown-menu">
+                            <li>
+                                <a href="/services/kitchen.html">
+                                    <img src="/images/Kitchen.jpg" alt="Kitchen Joinery">
+                                    <span>Kitchen</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/services/built-in-wardrobe.html">
+                                    <img src="/images/closet-with-wardrobe.jpg" alt="Custom Wardrobes">
+                                    <span>Built-in Wardrobe</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/services/walk-in-wardrobe.html">
+                                    <img src="/images/wardrobe-make-up-table.jpg" alt="Shop Fitting">
+                                    <span>Walk-in Wardrobe</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/services/bathroom-vanity.html">
+                                    <img src="/images/modern-elegant-home-interior-design.jpg" alt="Shop Fitting">
+                                    <span>Bathroom Vanity</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/services/commercial.html">
+                                    <img src="/images/cafe-bar-hotel-loft-style.jpg" alt="Shop Fitting">
+                                    <span>Commercial</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="/contact-us.html" target="_self">Contact Us</a></li>
+                    <li><a href="/#" class="appoinment-btn cta-btn" target="_self">Appoinment Request</a></li>
+                </ul>
+            </nav>
         </div>
-    </section>
+    </header>
 
     <!-- Appointment Modal -->
     <div class="modal-overlay" id="appointment-modal">
