@@ -39,7 +39,7 @@ body {
 body.sidebar-open{
     position: relative;
     transition: 0.2s ease-in-out;
-    transform: translateX(-230px);
+    /* transform: translateX(-230px); */
     overflow: hidden;
 }
 .overlay{
@@ -194,6 +194,7 @@ h6 {
 .breadcrum-link a:hover {
     color: var(--primary-color);
 }
+
 
 
 /* Top Section */
@@ -708,7 +709,10 @@ footer .container {
     .hamburger {
         display: block;
     }
-
+    body.sidebar-open .hamburger{
+        position: relative;
+        right: 230px;
+    }
     body.sidebar-open .hamburger-wrapper div:nth-child(2) {
         display: none;
     }
@@ -728,7 +732,7 @@ footer .container {
         flex-direction: column;
         position: absolute;
         top: -57px;
-        right: -230px;
+        right: 0;
         background-color: #000;
         gap: 0;
         padding: 24px 24px 8px;
@@ -790,9 +794,6 @@ footer .container {
 
 
 @media (max-width:480px) {
-    body.sidebar-open{
-        transform: translateX(-178px);
-    }
     
     .container {
         padding: 0 10px;
@@ -804,8 +805,7 @@ footer .container {
     }
     .section-subtitle {
         font-size: 34px;
-        line-height: 36px;
-        
+        line-height: 36px;        
     }
     .contact-info-wrapper {
         width: 100%;
@@ -818,6 +818,9 @@ footer .container {
 
 
     /* Hamburger 480*/
+     body.sidebar-open .hamburger{
+        right: 180px;
+    }
     .hamburger-wrapper div:nth-child(2) {
         width: 38px;
     }
@@ -825,9 +828,14 @@ footer .container {
     .hamburger-wrapper div {
         width: 34px;
     }
-
     .hamburger:hover .hamburger-wrapper div:nth-child(2) {
         width: 34px;
+    }
+    body.sidebar-open .hamburger-wrapper div:nth-child(1){
+        width: 28px;
+    }
+    body.sidebar-open .hamburger-wrapper div:nth-child(3){
+        width: 28px;
     }
 
 
@@ -855,11 +863,17 @@ footer .container {
         justify-content: space-between !important;
         width: 100%;
     }
+    .top-social{
+        display: none !important;
+    }
     .top-social .fab {
         font-size: 16px;
     }
     .top-social .fa-facebook-f {
         font-size: 15px;
+    }
+    .top-backslash{
+        display: none !important;
     }
 
     /* Header Section 480*/
@@ -872,8 +886,8 @@ footer .container {
     .nav-links {
         padding: 0px 12px 8px;
         width: 180px;
-        top: -80px;
-        right: -180px;
+        top: -54px;
+        right: 0;
     }
     .nav-links .cta-btn {
         padding: 10px 14px;
