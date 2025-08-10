@@ -157,8 +157,9 @@ h6 {
     background-position: center center;
     background-size: cover;
     position: relative;
-    top: -110px;
-    padding: 210px 0 120px;
+    /* top: -110px; */
+    padding: 120px 0 120px;
+    margin-bottom: 150px;
 }
 
 .breadcrum .container {
@@ -203,6 +204,7 @@ h6 {
     background: var(--secondary-color);
     color: #fff;
     font-size: 14px;
+    display: none;
 }
 
 .top .container {
@@ -262,10 +264,23 @@ header {
     z-index: 100;
     position: sticky;
     top: 0;
+    background: #001F12;
+    transition: 0.2s ease-in;
 }
 header.scrolled{
     background: #001F12;
     transition: 0.2s ease;
+    height: fit-content;
+    padding: 8px 0 6px;
+}
+    /* padding: 8px 22px; */
+header.scrolled .logo a img{
+    height: 40px;
+    transition: 0.2s ease-in-out;
+}
+header.scrolled nav ul li {
+    padding: 0 0;
+    transition: 0.2s ease-in-out;
 }
 
 header .container {
@@ -302,23 +317,6 @@ header nav ul li a {
     position: relative;
 }
 
-header nav ul li .free-website-btn {
-    background: var(--primary-color);
-    color: #fff;
-    padding: 4px 12px;
-    border-radius: 40px;
-    overflow: hidden;
-    transition: 0.2s ease;
-}
-
-header nav ul li .free-website-btn:hover {
-    background: #c51f0d;
-}
-
-header nav ul li .free-website-btn:hover::after {
-    width: 0;
-}
-
 header nav ul li a::after {
     content: '';
     position: absolute;
@@ -333,6 +331,11 @@ header nav ul li a::after {
 header nav ul li a:hover::after {
     width: 100%;
     left: 0;
+}
+
+header.scrolled .cta-btn{
+ padding: 8px 24px;   
+ transition: 0.2s ease-in-out;
 }
 
 .nav-cross {
@@ -691,6 +694,10 @@ footer .container {
         font-size: 42px;        
     }
 
+    /* Top Section 768*/
+    /* .top{
+        display: block;
+    } */
     /* Breadcrum Section 768*/
     .breadcrum {
         padding: 160px 0 100px;
@@ -698,7 +705,6 @@ footer .container {
     .page-name {
         font-size: 52px;
     }
-
 
     /* Header Section 768*/
     header .container {
@@ -731,7 +737,7 @@ footer .container {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: -57px;
+        top: 0;
         right: 0;
         background-color: #000;
         gap: 0;
@@ -745,6 +751,9 @@ footer .container {
         top: 0;
     }
     header nav ul li {
+        padding: 20px 0;
+    }
+    header.scrolled nav ul li {
         padding: 20px 0;
     }
 
@@ -886,7 +895,7 @@ footer .container {
     .nav-links {
         padding: 0px 12px 8px;
         width: 180px;
-        top: -54px;
+        top: 0;
         right: 0;
     }
     .nav-links .cta-btn {
