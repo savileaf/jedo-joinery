@@ -666,14 +666,11 @@ footer .container {
     border: none;
 }
 
-
-
 @media (max-width:1200px) {
     .container {
         padding: 0 40px;
     }
 }
-
 
 @media (max-width:900px) {
     .container {
