@@ -75,25 +75,28 @@ window.addEventListener('click', (e) => {
 });
 
 
-function headerScrolled(){
+function headerScrolled() {
     const header = document.getElementById('header');
-    console.log("Header:", header);
+    if (!header) return;
 
-    if(header) {
-        window.addEventListener("scroll", ()=>{
-            if(window.scrollY>100){
-                header.classList.add('scrolled');
-                // console.log("scrollled");                
-            }
-            else{
-                header.classList.remove('scrolled');
-            }
-        })
-    };
+    let isShrunk = false;
 
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+
+        if (scrollY > 100 && !isShrunk) {
+            header.classList.add('scrolled');
+            isShrunk = true;
+        } else if (scrollY <= 100 && isShrunk) {
+            header.classList.remove('scrolled');
+            isShrunk = false;
+        }
+    });
 }
 
 headerScrolled();
+
+
 
 
 

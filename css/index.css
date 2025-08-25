@@ -267,25 +267,25 @@ header {
     position: sticky;
     top: 0;
     background: #001F12;
-    transition: 0.2s ease-in;
+    transition: 0.2s ease;
 }
 
 header.scrolled {
     background: #001F12;
-    transition: 0.2s ease;
-    height: fit-content;
+    /* transition: 0.2s ease; */
+    height: 58px;
     padding: 8px 0 6px;
 }
 
 /* padding: 8px 22px; */
 header.scrolled .logo a img {
     height: 40px;
-    transition: 0.2s ease-in-out;
+    /* transition: 0.2s ease; */
 }
 
 header.scrolled nav ul li {
     padding: 0 0;
-    transition: 0.2s ease-in-out;
+    /* transition: 0.2s ease; */
 }
 
 header .container {
@@ -298,6 +298,7 @@ header .container {
 
 .logo a img {
     height: 70px;
+    transition: 0.2s ease;
 }
 
 .nav-links {
@@ -314,6 +315,7 @@ header nav ul {
 
 header nav ul li {
     padding: 16px 0;
+    transition: 0.2s ease;
 }
 
 header nav ul li a {
@@ -341,7 +343,7 @@ header nav ul li a:hover::after {
 
 header.scrolled .cta-btn {
     padding: 8px 24px;
-    transition: 0.2s ease-in-out;
+    /* transition: 0.2s ease-in-out; */
 }
 
 .nav-cross {
